@@ -1,17 +1,21 @@
-﻿<h1>Add New Employer</h1>
+﻿@model TechJobs6Persistent.ViewModels.AddEmployerViewModel
+
+<h1>Add New Employer</h1>
 
 <form asp-controller="Employer" asp-action="ProcessCreateEmployerForm" method="post">
 
     <div class="form-group">
-        <label>Employer Name</label>
-        <input />
+        <label asp-for="name">Employer Name</label>
+        <input asp-for="name"/>
+        <span asp-validation-for="name">Name</span>
     </div>
 
     <br />
 
     <div class="form-group">
-        <label>Employer Location</label>
-        <input />
+        <label asp-for="location">Employer Location</label>
+        <input asp-for="location" />
+        <span asp-validation-for="location"></span>
     </div>
 
     <br />
